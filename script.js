@@ -206,20 +206,28 @@
 let arr = [
     {
         id : document.getElementById("cardHeading1").src, 
-        title :"iphone",
+        title :"IPHONE",
         image : document.getElementById("cardImage1").src, 
+        price : document.getElementById("price1"),
+        description : document.getElementById("cardDescription1")
 
     },
     {   id : document.getElementById("cardHeading2").src, 
-        title :"samsung",
+        title :"SAMSUNG",
         image : document.getElementById("cardImage2").src, 
-        id2: document.getElementById("cardImage2").src,
+        price : document.getElementById("price2"),
+        description : document.getElementById("cardDescription2")
+
 
     },
     {
         id : document.getElementById("cardHeading3").src, 
         title :"NOKIA",
         image : document.getElementById("cardImage3").src, 
+        price : document.getElementById("price3"),
+        description : document.getElementById("cardDescription3")
+
+
 
     }
 ]
@@ -250,8 +258,16 @@ form.addEventListener("submit",(event)=>{
             displayImg.src = i.image;
             displayImg.width = 200;
 
+            let price = document.createElement("h3")
+            price.innerText = i.price.textContent
+
+            let descriptionText = document.createElement("p")
+            descriptionText.textContent = i.description.textContent
+
             card.appendChild(headingText)
             card.appendChild(displayImg)
+            card.appendChild(price)
+            card.appendChild(descriptionText)
             para1.appendChild(card)
 
             break
