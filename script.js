@@ -239,9 +239,7 @@ form.addEventListener("submit", (event) => {
 
   for (i of arr) {
     if (
-      i.title.toLowerCase() === search.value.toLowerCase() ||
-      i.title.toLowerCase().includes(search.value.toLowerCase())
-    ) {
+      i.title.toLowerCase() === search.value.toLowerCase() || i.title.toLowerCase().includes(search.value.toLowerCase())) {
       found = true;
       // let heading =  document.getElementById("cardHeading1").textContent
       // let displayImg =  document.getElementById("cardImage1").src
